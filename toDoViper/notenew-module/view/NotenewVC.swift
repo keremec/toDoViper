@@ -16,11 +16,15 @@ class NotenewVC: UIViewController {
     
     @IBOutlet weak var tfNoteDetail: UITextView!
     
+    
+    @IBOutlet weak var btnSave: UIButton!
+    
     var notenewPresenterObject:VtoP_NotenewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotenewRouter.createModule(ref: self)
+        tfNoteTitle.delegate = self
         tfNoteDetail.delegate = self
         
         tfNoteDetail.text = "Buraya Detayları Girebilirsiniz"
@@ -51,6 +55,7 @@ extension NotenewVC:UITextViewDelegate{
         if tfNoteDetail.textColor == UIColor.placeholderText{
         tfNoteDetail.text = nil
         tfNoteDetail.textColor = UIColor.label
+        
         }
     }
     
@@ -61,4 +66,17 @@ extension NotenewVC:UITextViewDelegate{
         }
     }
     
+}
+
+extension NotenewVC:UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        guard let oldText = textField.text else {
+            return false
+        }
+        
+        let newText = (oldText as NSString).replacingCharacters(in: range, with: string)
+        btnSave.isEnabled = !newText.isEmpty
+        return true
+    }
 }

@@ -18,12 +18,16 @@ class NotedetailVC: UIViewController {
     
     @IBOutlet weak var tfNoteDetail: UITextView!
     
+    
+    @IBOutlet weak var btnSave: UIButton!
+    
     var notedetailPresenterObject:VtoP_NotedetailProtocol?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         NotedetailRouter.createModule(ref: self)
+        tfNoteTitle.delegate = self
         tfNoteDetail.delegate = self
         if let n = note{
             tfNoteTitle.text = n.note_title
@@ -70,4 +74,18 @@ extension NotedetailVC:UITextViewDelegate{
         }
     }
     
+}
+
+
+extension NotedetailVC:UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        guard let oldText = textField.text else {
+            return false
+        }
+        
+        let newText = (oldText as NSString).replacingCharacters(in: range, with: string)
+        btnSave.isEnabled = !newText.isEmpty
+        return true
+    }
 }
