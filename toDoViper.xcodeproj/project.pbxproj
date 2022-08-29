@@ -21,6 +21,14 @@
 		0C96F5DD28BB9C1700561FE4 /* CraftRounded-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C96F5DC28BB9C1700561FE4 /* CraftRounded-DemiBold.ttf */; };
 		0C96F5DF28BB9C1E00561FE4 /* CraftRounded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C96F5DE28BB9C1E00561FE4 /* CraftRounded-Regular.ttf */; };
 		0C96F5E128BB9C2600561FE4 /* CraftRounded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C96F5E028BB9C2600561FE4 /* CraftRounded-Bold.ttf */; };
+		0C9A85AF28BCDEE700785933 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85A528BCDEE700785933 /* FMResultSet.m */; };
+		0C9A85B028BCDEE700785933 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85A928BCDEE700785933 /* FMDatabaseQueue.m */; };
+		0C9A85B128BCDEE700785933 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85AB28BCDEE700785933 /* FMDatabase.m */; };
+		0C9A85B228BCDEE700785933 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85AC28BCDEE700785933 /* FMDatabaseAdditions.m */; };
+		0C9A85B328BCDEE700785933 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85AD28BCDEE700785933 /* FMDatabasePool.m */; };
+		0C9A85B828BCE23200785933 /* HomepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85B728BCE23200785933 /* HomepageRouter.swift */; };
+		0C9A85BB28BCE27000785933 /* HomepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85BA28BCE27000785933 /* HomepageInteractor.swift */; };
+		0C9A85BD28BCE28800785933 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85BC28BCE28800785933 /* HomepagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,22 @@
 		0C96F5DC28BB9C1700561FE4 /* CraftRounded-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CraftRounded-DemiBold.ttf"; sourceTree = "<group>"; };
 		0C96F5DE28BB9C1E00561FE4 /* CraftRounded-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CraftRounded-Regular.ttf"; sourceTree = "<group>"; };
 		0C96F5E028BB9C2600561FE4 /* CraftRounded-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CraftRounded-Bold.ttf"; sourceTree = "<group>"; };
+		0C9A85A328BCDEE700785933 /* toDoViper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "toDoViper-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C9A85A428BCDEE700785933 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0C9A85A528BCDEE700785933 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		0C9A85A628BCDEE700785933 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0C9A85A728BCDEE700785933 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		0C9A85A828BCDEE700785933 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0C9A85A928BCDEE700785933 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		0C9A85AA28BCDEE700785933 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0C9A85AB28BCDEE700785933 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0C9A85AC28BCDEE700785933 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0C9A85AD28BCDEE700785933 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		0C9A85AE28BCDEE700785933 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		0C9A85B628BCE13300785933 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0C9A85B728BCE23200785933 /* HomepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRouter.swift; sourceTree = "<group>"; };
+		0C9A85BA28BCE27000785933 /* HomepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageInteractor.swift; sourceTree = "<group>"; };
+		0C9A85BC28BCE28800785933 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 			children = (
 				0C16F28128BA340F00729B16 /* toDoViper */,
 				0C16F28028BA340F00729B16 /* Products */,
+				0C9A85B528BCE13300785933 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +97,7 @@
 		0C16F28128BA340F00729B16 /* toDoViper */ = {
 			isa = PBXGroup;
 			children = (
+				0C9A85B428BCDEF000785933 /* Sqlite Files */,
 				0C96F5DB28BB9C0800561FE4 /* fonts */,
 				0C16F28228BA340F00729B16 /* AppDelegate.swift */,
 				0C16F28428BA340F00729B16 /* SceneDelegate.swift */,
@@ -143,6 +169,7 @@
 		0C96F5C528BB7D8000561FE4 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				0C9A85B728BCE23200785933 /* HomepageRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -150,6 +177,7 @@
 		0C96F5C628BB7D8A00561FE4 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0C9A85BA28BCE27000785933 /* HomepageInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -157,6 +185,7 @@
 		0C96F5C728BB7D9100561FE4 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0C9A85BC28BCE28800785933 /* HomepagePresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -259,6 +288,33 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		0C9A85B428BCDEF000785933 /* Sqlite Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C9A85A428BCDEE700785933 /* FMDatabase.h */,
+				0C9A85AB28BCDEE700785933 /* FMDatabase.m */,
+				0C9A85A628BCDEE700785933 /* FMDatabaseAdditions.h */,
+				0C9A85AC28BCDEE700785933 /* FMDatabaseAdditions.m */,
+				0C9A85A728BCDEE700785933 /* FMDatabasePool.h */,
+				0C9A85AD28BCDEE700785933 /* FMDatabasePool.m */,
+				0C9A85A828BCDEE700785933 /* FMDatabaseQueue.h */,
+				0C9A85A928BCDEE700785933 /* FMDatabaseQueue.m */,
+				0C9A85AE28BCDEE700785933 /* FMDB.h */,
+				0C9A85AA28BCDEE700785933 /* FMResultSet.h */,
+				0C9A85A528BCDEE700785933 /* FMResultSet.m */,
+				0C9A85A328BCDEE700785933 /* toDoViper-Bridging-Header.h */,
+			);
+			name = "Sqlite Files";
+			sourceTree = "<group>";
+		};
+		0C9A85B528BCE13300785933 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C9A85B628BCE13300785933 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +347,7 @@
 				TargetAttributes = {
 					0C16F27E28BA340F00729B16 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -333,14 +390,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9A85BD28BCE28800785933 /* HomepagePresenter.swift in Sources */,
 				0C3FEF1728BBB38B00EF31BD /* NotenewVC.swift in Sources */,
 				0C16F28728BA340F00729B16 /* HomepageVC.swift in Sources */,
+				0C9A85B828BCE23200785933 /* HomepageRouter.swift in Sources */,
+				0C9A85B328BCDEE700785933 /* FMDatabasePool.m in Sources */,
 				0C3FEF1528BBA83100EF31BD /* TableViewNoteCell.swift in Sources */,
 				0C96F5DA28BB8C0900561FE4 /* Notes.swift in Sources */,
 				0C96F5D628BB897600561FE4 /* HomepageProtocol.swift in Sources */,
+				0C9A85B028BCDEE700785933 /* FMDatabaseQueue.m in Sources */,
+				0C9A85BB28BCE27000785933 /* HomepageInteractor.swift in Sources */,
 				0C16F28328BA340F00729B16 /* AppDelegate.swift in Sources */,
+				0C9A85AF28BCDEE700785933 /* FMResultSet.m in Sources */,
 				0C16F28528BA340F00729B16 /* SceneDelegate.swift in Sources */,
+				0C9A85B128BCDEE700785933 /* FMDatabase.m in Sources */,
 				0C3FEF1928BBB3AB00EF31BD /* NotedetailVC.swift in Sources */,
+				0C9A85B228BCDEE700785933 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79SWHBWQMY;
@@ -503,6 +569,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerem.toDoViper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "toDoViper/toDoViper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -513,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79SWHBWQMY;
@@ -531,6 +600,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerem.toDoViper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "toDoViper/toDoViper-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -11,27 +11,28 @@ class HomepageVC: UIViewController {
 
     @IBOutlet weak var counterLabel: UILabel!
     
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var notesTableView: UITableView!
     
     var notesList = [Notes]()
     
+    var homepagePresenterObject:VtoP_HomepageProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
         notesTableView.delegate = self
         notesTableView.dataSource = self
-        
-        let n1 = Notes(note_id: 1, note_title: "Not1", note_detail: "ayrıntılar", note_status: false)
-        
-        let n2 = Notes(note_id: 2, note_title: "Not2", note_detail: "ayrıntılar2", note_status: true)
-        
-        notesList.append(n1)
-        notesList.append(n2)
-        
-        
+        HomepageRouter.createModule(ref: self)
+
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        homepagePresenterObject?.doLoadNote()
+    }
     
 }
 
@@ -75,7 +76,7 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    //MARK: Swipe Actions
+    //MARK: Tableview Swipe Actions
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let note = self.notesList[indexPath.row]
@@ -109,4 +110,25 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
     }
 
 }
+
+
+
+//MARK: Load Notes
+
+extension HomepageVC:PtoV_HomepageProtocol{
+    func dataSendtoView(noteList: Array<Notes>) {
+        self.notesList = noteList
+        self.notesTableView.reloadData()
+    }
+}
+
+
+//MARK: Search Notes
+
+extension HomepageVC:UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        homepagePresenterObject?.doSearchNote(searchString: searchText)
+    }
+}
+
 

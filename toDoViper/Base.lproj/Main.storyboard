@@ -130,7 +130,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="s3W-al-Soq" id="ccU-NN-6N5"/>
                         <outlet property="notesTableView" destination="r3P-dV-tt3" id="EVr-ae-nNp"/>
-                        <outlet property="searchBar" destination="cEU-Hb-orr" id="EoW-0L-WX4"/>
+                        <outlet property="searchBar" destination="cEU-Hb-orr" id="Ujq-6d-h5x"/>
                         <segue destination="ZYk-Vd-zXf" kind="presentation" identifier="toDetail" id="tBG-cL-a09"/>
                     </connections>
                 </viewController>
