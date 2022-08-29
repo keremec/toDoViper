@@ -48,58 +48,60 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3W-al-Soq">
-                                <rect key="frame" x="343" y="115" width="51" height="53"/>
+                                <rect key="frame" x="343" y="115" width="51" height="54"/>
                                 <fontDescription key="fontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="46"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Backlog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-ZK-e6I">
-                                <rect key="frame" x="20" y="115" width="160" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-ZK-e6I">
+                                <rect key="frame" x="20" y="115" width="116" height="54"/>
                                 <fontDescription key="fontDescription" name="CraftRounded-DemiBold" family="Craft Rounded" pointSize="46"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="cEU-Hb-orr">
-                                <rect key="frame" x="10" y="178" width="394" height="51"/>
+                                <rect key="frame" x="10" y="179" width="394" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-dV-tt3">
-                                <rect key="frame" x="0.0" y="229" width="414" height="633"/>
+                                <rect key="frame" x="0.0" y="230" width="414" height="632"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="48" id="I43-82-SEi" customClass="TableViewNoteCell" customModule="toDoViper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="48"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="103" id="I43-82-SEi" customClass="TableViewNoteCell" customModule="toDoViper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I43-82-SEi" id="KJM-bK-LFw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzZ-nK-oxo">
-                                                    <rect key="frame" x="10" y="0.0" width="45" height="48"/>
+                                                    <rect key="frame" x="0.0" y="10" width="45" height="83"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system"/>
                                                     <connections>
                                                         <action selector="noteButtonAction:" destination="I43-82-SEi" eventType="touchUpInside" id="hT3-ST-MdC"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-76-BHq">
-                                                    <rect key="frame" x="70" y="11" width="42" height="26"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="50" y="21" width="44" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NzZ-nK-oxo" firstAttribute="top" secondItem="KJM-bK-LFw" secondAttribute="top" id="EHg-Ml-rJ8"/>
-                                                <constraint firstItem="Shf-76-BHq" firstAttribute="leading" secondItem="NzZ-nK-oxo" secondAttribute="trailing" constant="15" id="SUC-33-ncW"/>
-                                                <constraint firstItem="NzZ-nK-oxo" firstAttribute="leading" secondItem="KJM-bK-LFw" secondAttribute="leading" constant="10" id="Vvm-mT-wXE"/>
-                                                <constraint firstItem="Shf-76-BHq" firstAttribute="bottom" secondItem="KJM-bK-LFw" secondAttribute="bottomMargin" id="cdi-AC-Dir"/>
-                                                <constraint firstAttribute="bottom" secondItem="NzZ-nK-oxo" secondAttribute="bottom" id="eau-h5-cX1"/>
-                                                <constraint firstItem="Shf-76-BHq" firstAttribute="top" secondItem="KJM-bK-LFw" secondAttribute="topMargin" id="ehE-vh-c6w"/>
+                                                <constraint firstItem="NzZ-nK-oxo" firstAttribute="leading" secondItem="KJM-bK-LFw" secondAttribute="leading" id="38A-gd-m8S"/>
+                                                <constraint firstAttribute="bottom" secondItem="NzZ-nK-oxo" secondAttribute="bottom" constant="10" id="Occ-kj-YKn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Shf-76-BHq" secondAttribute="bottom" constant="10" id="Pd4-A2-8hp"/>
+                                                <constraint firstItem="Shf-76-BHq" firstAttribute="top" secondItem="KJM-bK-LFw" secondAttribute="topMargin" constant="10" id="RFK-1a-RCp"/>
+                                                <constraint firstItem="NzZ-nK-oxo" firstAttribute="top" secondItem="KJM-bK-LFw" secondAttribute="top" constant="10" id="uXX-bR-v0a"/>
+                                                <constraint firstItem="Shf-76-BHq" firstAttribute="leading" secondItem="NzZ-nK-oxo" secondAttribute="trailing" constant="5" id="wgp-Q9-Kp1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <connections>
                                             <outlet property="noteLabel" destination="Shf-76-BHq" id="jMb-Xw-aq2"/>
+                                            <outlet property="noteStatus" destination="NzZ-nK-oxo" id="KBC-xf-8Gy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,6 +130,9 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="hm5-1L-59f"/>
                     <connections>
+                        <outlet property="counterLabel" destination="s3W-al-Soq" id="ccU-NN-6N5"/>
+                        <outlet property="notesTableView" destination="r3P-dV-tt3" id="EVr-ae-nNp"/>
+                        <outlet property="searchBar" destination="cEU-Hb-orr" id="EoW-0L-WX4"/>
                         <segue destination="ZYk-Vd-zXf" kind="presentation" id="tBG-cL-a09"/>
                     </connections>
                 </viewController>
@@ -293,7 +298,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="circle.inset.filled" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

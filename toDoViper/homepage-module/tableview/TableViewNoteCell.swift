@@ -13,6 +13,10 @@ class TableViewNoteCell: UITableViewCell {
     
     @IBOutlet weak var noteLabel: UILabel!
     
+    @IBOutlet weak var noteStatus: UIButton!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
