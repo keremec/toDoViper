@@ -148,33 +148,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-Bz-JcK">
-                                <rect key="frame" x="345" y="69" width="44" height="37"/>
+                                <rect key="frame" x="302.5" y="69" width="86.5" height="38.5"/>
                                 <fontDescription key="fontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="21"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Save"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Kaydet">
+                                    <fontDescription key="titleFontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="21"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="pressSave:" destination="Qws-dQ-x3P" eventType="touchUpInside" id="yr3-Bg-wDl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvs-hB-kCb">
-                                <rect key="frame" x="25" y="69" width="64" height="37"/>
-                                <fontDescription key="fontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="21"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvs-hB-kCb">
+                                <rect key="frame" x="25" y="69" width="58.5" height="22"/>
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title=" İptal" image="chevron.down" catalog="system">
+                                    <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                                 <connections>
                                     <action selector="pressCancel:" destination="Qws-dQ-x3P" eventType="touchUpInside" id="P9b-U0-h5m"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gkb-Id-y8S">
-                                <rect key="frame" x="25" y="131" width="364" height="30.5"/>
+                                <rect key="frame" x="25" y="116" width="364" height="30.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Your Note Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aNU-5e-Wqr">
-                                <rect key="frame" x="25" y="191.5" width="364" height="650.5"/>
+                                <rect key="frame" x="25" y="176.5" width="364" height="665.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -216,33 +222,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re7-d9-1wa">
-                                <rect key="frame" x="345" y="69" width="44" height="37"/>
+                                <rect key="frame" x="302.5" y="69" width="86.5" height="38.5"/>
                                 <fontDescription key="fontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="21"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Kaydet"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Kaydet">
+                                    <fontDescription key="titleFontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="21"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="pressSave:" destination="ZYk-Vd-zXf" eventType="touchUpInside" id="2ZB-zR-nx0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfj-d5-6Iu">
-                                <rect key="frame" x="25" y="69" width="64" height="37"/>
-                                <fontDescription key="fontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="21"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfj-d5-6Iu">
+                                <rect key="frame" x="25" y="69" width="58.5" height="22"/>
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title=" İptal" image="chevron.down" catalog="system">
+                                    <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                                 <connections>
                                     <action selector="pressCancel:" destination="ZYk-Vd-zXf" eventType="touchUpInside" id="fPK-3j-kXZ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DhH-TJ-rhA">
-                                <rect key="frame" x="25" y="131" width="364" height="30.5"/>
+                                <rect key="frame" x="25" y="132.5" width="364" height="30.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Your Note Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7sI-me-INb">
-                                <rect key="frame" x="25" y="191.5" width="364" height="650.5"/>
+                                <rect key="frame" x="25" y="193" width="364" height="649"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -297,6 +310,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
@@ -311,17 +325,14 @@
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

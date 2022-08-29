@@ -8,7 +8,7 @@
 import UIKit
 
 class HomepageVC: UIViewController {
-
+    
     @IBOutlet weak var counterLabel: UILabel!
     
     
@@ -35,9 +35,21 @@ class HomepageVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         homepagePresenterObject?.doLoadNote()
         updateCounter()
-        
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toDetail":
+            if let note = sender as? Notes{
+                let goalVC = segue.destination as! NotedetailVC
+                goalVC.delegateSave = self
+                goalVC.note = note
+            }
+            
+        default:
+            print("identifier not found")
+            
+        }
     }
     
     @IBAction func cellButton(_ sender: UIButton) {

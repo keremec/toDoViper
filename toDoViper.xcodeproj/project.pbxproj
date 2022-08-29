@@ -13,6 +13,14 @@
 		0C16F28A28BA340F00729B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C16F28828BA340F00729B16 /* Main.storyboard */; };
 		0C16F28C28BA341200729B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C16F28B28BA341200729B16 /* Assets.xcassets */; };
 		0C16F28F28BA341200729B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C16F28D28BA341200729B16 /* LaunchScreen.storyboard */; };
+		0C1C785E28BD4C4400516F1A /* NotedetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C785D28BD4C4400516F1A /* NotedetailProtocol.swift */; };
+		0C1C786028BD4DB900516F1A /* NotedetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C785F28BD4DB900516F1A /* NotedetailPresenter.swift */; };
+		0C1C786228BD4EE600516F1A /* NotedetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C786128BD4EE600516F1A /* NotedetailInteractor.swift */; };
+		0C1C786428BD4F9300516F1A /* NotedetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C786328BD4F9300516F1A /* NotedetailRouter.swift */; };
+		0C1C786728BD59D700516F1A /* NotenewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C786628BD59D700516F1A /* NotenewProtocol.swift */; };
+		0C1C786928BD59EB00516F1A /* NotenewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C786828BD59EB00516F1A /* NotenewInteractor.swift */; };
+		0C1C786B28BD59F900516F1A /* NotenewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C786A28BD59F900516F1A /* NotenewPresenter.swift */; };
+		0C1C786D28BD5A0E00516F1A /* NotenewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C786C28BD5A0E00516F1A /* NotenewRouter.swift */; };
 		0C3FEF1528BBA83100EF31BD /* TableViewNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FEF1428BBA83100EF31BD /* TableViewNoteCell.swift */; };
 		0C3FEF1728BBB38B00EF31BD /* NotenewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FEF1628BBB38B00EF31BD /* NotenewVC.swift */; };
 		0C3FEF1928BBB3AB00EF31BD /* NotedetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FEF1828BBB3AB00EF31BD /* NotedetailVC.swift */; };
@@ -41,6 +49,14 @@
 		0C16F28B28BA341200729B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C16F28E28BA341200729B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C16F29028BA341200729B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C1C785D28BD4C4400516F1A /* NotedetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedetailProtocol.swift; sourceTree = "<group>"; };
+		0C1C785F28BD4DB900516F1A /* NotedetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedetailPresenter.swift; sourceTree = "<group>"; };
+		0C1C786128BD4EE600516F1A /* NotedetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedetailInteractor.swift; sourceTree = "<group>"; };
+		0C1C786328BD4F9300516F1A /* NotedetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedetailRouter.swift; sourceTree = "<group>"; };
+		0C1C786628BD59D700516F1A /* NotenewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenewProtocol.swift; sourceTree = "<group>"; };
+		0C1C786828BD59EB00516F1A /* NotenewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenewInteractor.swift; sourceTree = "<group>"; };
+		0C1C786A28BD59F900516F1A /* NotenewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenewPresenter.swift; sourceTree = "<group>"; };
+		0C1C786C28BD5A0E00516F1A /* NotenewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenewRouter.swift; sourceTree = "<group>"; };
 		0C3FEF1428BBA83100EF31BD /* TableViewNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewNoteCell.swift; sourceTree = "<group>"; };
 		0C3FEF1628BBB38B00EF31BD /* NotenewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenewVC.swift; sourceTree = "<group>"; };
 		0C3FEF1828BBB3AB00EF31BD /* NotedetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedetailVC.swift; sourceTree = "<group>"; };
@@ -203,6 +219,7 @@
 		0C96F5C928BB7E7E00561FE4 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C786628BD59D700516F1A /* NotenewProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -210,6 +227,7 @@
 		0C96F5CA28BB7E8D00561FE4 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C786C28BD5A0E00516F1A /* NotenewRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -217,6 +235,7 @@
 		0C96F5CB28BB7E9600561FE4 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C786828BD59EB00516F1A /* NotenewInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -224,6 +243,7 @@
 		0C96F5CC28BB7EA100561FE4 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C786A28BD59F900516F1A /* NotenewPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -247,6 +267,7 @@
 		0C96F5CF28BB7EE200561FE4 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C786328BD4F9300516F1A /* NotedetailRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -254,6 +275,7 @@
 		0C96F5D028BB7EE900561FE4 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C785F28BD4DB900516F1A /* NotedetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -261,6 +283,7 @@
 		0C96F5D128BB7EEE00561FE4 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C786128BD4EE600516F1A /* NotedetailInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -268,6 +291,7 @@
 		0C96F5D228BB7EF500561FE4 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0C1C785D28BD4C4400516F1A /* NotedetailProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -395,21 +419,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9A85BD28BCE28800785933 /* HomepagePresenter.swift in Sources */,
+				0C1C786B28BD59F900516F1A /* NotenewPresenter.swift in Sources */,
 				0C3FEF1728BBB38B00EF31BD /* NotenewVC.swift in Sources */,
 				0C16F28728BA340F00729B16 /* HomepageVC.swift in Sources */,
+				0C1C786428BD4F9300516F1A /* NotedetailRouter.swift in Sources */,
 				0C9A85B828BCE23200785933 /* HomepageRouter.swift in Sources */,
+				0C1C786928BD59EB00516F1A /* NotenewInteractor.swift in Sources */,
 				0C9A85B328BCDEE700785933 /* FMDatabasePool.m in Sources */,
 				0C3FEF1528BBA83100EF31BD /* TableViewNoteCell.swift in Sources */,
 				0C96F5DA28BB8C0900561FE4 /* Notes.swift in Sources */,
+				0C1C786228BD4EE600516F1A /* NotedetailInteractor.swift in Sources */,
 				0C96F5D628BB897600561FE4 /* HomepageProtocol.swift in Sources */,
 				0C9A85B028BCDEE700785933 /* FMDatabaseQueue.m in Sources */,
 				0C9A85BB28BCE27000785933 /* HomepageInteractor.swift in Sources */,
+				0C1C786728BD59D700516F1A /* NotenewProtocol.swift in Sources */,
 				0C16F28328BA340F00729B16 /* AppDelegate.swift in Sources */,
 				0C9A85AF28BCDEE700785933 /* FMResultSet.m in Sources */,
 				0C16F28528BA340F00729B16 /* SceneDelegate.swift in Sources */,
 				0C9A85B128BCDEE700785933 /* FMDatabase.m in Sources */,
 				0C3FEF1928BBB3AB00EF31BD /* NotedetailVC.swift in Sources */,
 				0C9A85B228BCDEE700785933 /* FMDatabaseAdditions.m in Sources */,
+				0C1C785E28BD4C4400516F1A /* NotedetailProtocol.swift in Sources */,
+				0C1C786028BD4DB900516F1A /* NotedetailPresenter.swift in Sources */,
+				0C1C786D28BD5A0E00516F1A /* NotenewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

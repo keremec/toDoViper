@@ -9,6 +9,7 @@ import UIKit
 
 class NotenewVC: UIViewController {
     
+    weak var delegateCreate:HomepageVC?
     
     @IBOutlet weak var tfNoteTitle: UITextField!
     
@@ -30,3 +31,4 @@ class NotenewVC: UIViewController {
     }
     
 }
+
