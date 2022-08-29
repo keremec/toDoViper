@@ -35,7 +35,6 @@ class HomepageVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         homepagePresenterObject?.doLoadNote()
         updateCounter()
-        print("calisti")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
