@@ -59,16 +59,17 @@
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="cEU-Hb-orr">
-                                <rect key="frame" x="10" y="179" width="394" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-dV-tt3">
-                                <rect key="frame" x="0.0" y="230" width="414" height="632"/>
+                                <rect key="frame" x="0.0" y="189" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="cEU-Hb-orr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="103" id="I43-82-SEi" customClass="TableViewNoteCell" customModule="toDoViper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="95.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I43-82-SEi" id="KJM-bK-LFw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
@@ -110,14 +111,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="r3P-dV-tt3" firstAttribute="top" secondItem="cEU-Hb-orr" secondAttribute="bottom" id="6Qx-W1-ybH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hKo-JH-z0W" secondAttribute="trailing" id="8To-VW-AGA"/>
-                            <constraint firstItem="cEU-Hb-orr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="9wl-2Y-46c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s3W-al-Soq" secondAttribute="trailing" constant="20" id="BE0-tP-68Y"/>
-                            <constraint firstItem="cEU-Hb-orr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="HGt-6q-Rnr"/>
+                            <constraint firstItem="r3P-dV-tt3" firstAttribute="top" secondItem="s3W-al-Soq" secondAttribute="bottom" constant="20" id="FZf-1Z-prP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r3P-dV-tt3" secondAttribute="bottom" id="IzM-h2-Hxu"/>
                             <constraint firstItem="2l5-ZK-e6I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PdL-AW-wCj"/>
-                            <constraint firstItem="cEU-Hb-orr" firstAttribute="top" secondItem="s3W-al-Soq" secondAttribute="bottom" constant="10" id="Pta-MQ-I6T"/>
                             <constraint firstItem="6Vv-GU-Hhu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Reo-oW-m56"/>
                             <constraint firstItem="r3P-dV-tt3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vxr-59-0zK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Vv-GU-Hhu" secondAttribute="trailing" constant="6" id="XPC-Qf-3Gk"/>
