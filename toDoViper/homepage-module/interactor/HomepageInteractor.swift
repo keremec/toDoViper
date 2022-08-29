@@ -10,36 +10,86 @@ import Foundation
 class HomepageInteractor:PtoI_HomepageProtocol{
     var homepagePresenter: ItoP_HomepageProtocol?
     
+    
+    let db:FMDatabase?
+    
+    init(){
+        let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let copyPath = URL(fileURLWithPath: destPath).appendingPathComponent("notesDB.sqlite")
+        db = FMDatabase(path: copyPath.path)
+    }
+    
     func loadNote() {
         
-        var TESTnotesList = [Notes]()
+        var list = [Notes]()
         
-        let n1 = Notes(note_id: 1, note_title: "Not1", note_detail: "ayrıntılar", note_status: false)
+        db?.open()
+        do {
+            let q = try db!.executeQuery("SELECT * FROM notes", values: nil)
+            while q.next(){
+                let note = Notes (note_id: Int(q.string(forColumn: "note_id"))!,
+                                  note_title: q.string(forColumn: "note_title")!,
+                                  note_detail: q.string(forColumn: "note_detail")!,
+                                  note_status: (Int(q.string(forColumn: "note_status"))! != 0))
+                
+                list.append(note)
+                homepagePresenter?.dataSendtoPresenter(noteList: list)
+            }
+            
+        }
+        catch{
+            print(error.localizedDescription)
+        }
         
-        let n2 = Notes(note_id: 2, note_title: "Not2", note_detail: "ayrıntılar2", note_status: true)
-        
-        TESTnotesList.append(n1)
-        TESTnotesList.append(n2)
-        
-        homepagePresenter?.dataSendtoPresenter(noteList: TESTnotesList)
+        db?.close()
     }
     
     func searchNote(searchString: String) {
-        var TESTnotesList = [Notes]()
-        let n1 = Notes(note_id: 1, note_title: "Not1", note_detail: "ayrıntılar", note_status: false)
+        var list = [Notes]()
         
-        TESTnotesList.append(n1)
-        homepagePresenter?.dataSendtoPresenter(noteList: TESTnotesList)
+        db?.open()
+        do {
+            let q = try db!.executeQuery("SELECT * FROM notes WHERE note_title like '%\(searchString)%' ", values: nil)
+            while q.next(){
+                let note = Notes (note_id: Int(q.string(forColumn: "note_id"))!,
+                                  note_title: q.string(forColumn: "note_title")!,
+                                  note_detail: q.string(forColumn: "note_detail")!,
+                                  note_status: (Int(q.string(forColumn: "note_status"))! != 0))
+                
+                list.append(note)
+                homepagePresenter?.dataSendtoPresenter(noteList: list)
+            }
+            
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+        
+        
+        db?.close()
     }
     
     func deleteNote(note_id: Int) {
-        print("silindi")
-        loadNote()
+        db?.open()
+        do {
+            try db!.executeUpdate("DELETE FROM notes WHERE note_id = ?", values: [note_id])
+            loadNote()
+        }
+        catch{
+            print(error.localizedDescription)
+        }
     }
     
-    func markNote(note_id: Int) {
-        print("isaretlendi")
-        loadNote()
+    func markNote(note_id: Int,value:Bool) {
+        let intValue = value ? 1 : 0
+        db?.open()
+        do {
+            try db!.executeUpdate("UPDATE notes SET note_status= ? WHERE note_id = ?", values: [intValue,note_id])
+            loadNote()
+        }
+        catch{
+            print(error.localizedDescription)
+        }
     }
     
     

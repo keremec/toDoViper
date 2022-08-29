@@ -24,8 +24,8 @@ class HomepagePresenter:VtoP_HomepageProtocol{
         homepageInteractor?.deleteNote(note_id: note_id)
     }
     
-    func doMarkNote(note_id: Int) {
-        homepageInteractor?.markNote(note_id: note_id)
+    func doMarkNote(note_id: Int,value:Bool) {
+        homepageInteractor?.markNote(note_id: note_id, value: value)
     }
     
     

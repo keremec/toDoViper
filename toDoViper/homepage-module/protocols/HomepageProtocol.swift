@@ -22,7 +22,7 @@ protocol VtoP_HomepageProtocol{
     func doLoadNote()
     func doSearchNote(searchString:String)
     func doDeleteNote(note_id:Int)
-    func doMarkNote(note_id:Int)
+    func doMarkNote(note_id:Int,value:Bool)
 }
 
 protocol PtoI_HomepageProtocol{
@@ -32,7 +32,7 @@ protocol PtoI_HomepageProtocol{
     func loadNote()
     func searchNote(searchString:String)
     func deleteNote(note_id:Int)
-    func markNote(note_id:Int)
+    func markNote(note_id:Int,value:Bool)
 }
 
 

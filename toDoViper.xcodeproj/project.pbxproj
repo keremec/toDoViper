@@ -29,6 +29,7 @@
 		0C9A85B828BCE23200785933 /* HomepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85B728BCE23200785933 /* HomepageRouter.swift */; };
 		0C9A85BB28BCE27000785933 /* HomepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85BA28BCE27000785933 /* HomepageInteractor.swift */; };
 		0C9A85BD28BCE28800785933 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A85BC28BCE28800785933 /* HomepagePresenter.swift */; };
+		0C9A85BF28BCEED000785933 /* notesDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A85BE28BCEED000785933 /* notesDB.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		0C9A85B728BCE23200785933 /* HomepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRouter.swift; sourceTree = "<group>"; };
 		0C9A85BA28BCE27000785933 /* HomepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageInteractor.swift; sourceTree = "<group>"; };
 		0C9A85BC28BCE28800785933 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
+		0C9A85BE28BCEED000785933 /* notesDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = notesDB.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 				0C9A85AA28BCDEE700785933 /* FMResultSet.h */,
 				0C9A85A528BCDEE700785933 /* FMResultSet.m */,
 				0C9A85A328BCDEE700785933 /* toDoViper-Bridging-Header.h */,
+				0C9A85BE28BCEED000785933 /* notesDB.sqlite */,
 			);
 			name = "Sqlite Files";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				0C16F28C28BA341200729B16 /* Assets.xcassets in Resources */,
 				0C16F28A28BA340F00729B16 /* Main.storyboard in Resources */,
 				0C96F5E128BB9C2600561FE4 /* CraftRounded-Bold.ttf in Resources */,
+				0C9A85BF28BCEED000785933 /* notesDB.sqlite in Resources */,
 				0C96F5DD28BB9C1700561FE4 /* CraftRounded-DemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

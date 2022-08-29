@@ -26,16 +26,26 @@ class HomepageVC: UIViewController {
         searchBar.delegate = self
         notesTableView.delegate = self
         notesTableView.dataSource = self
+        copyDB()
+        
         HomepageRouter.createModule(ref: self)
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         homepagePresenterObject?.doLoadNote()
+        updateCounter()
+        
+        
     }
     
-}
+    @IBAction func cellButton(_ sender: UIButton) {
+        let note = self.notesList[sender.tag]
+        homepagePresenterObject?.doMarkNote(note_id: note.note_id!, value: !(note.note_status!))
+    }
+    
 
+}
 
 
 
@@ -51,14 +61,17 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as! TableViewNoteCell
         
         cell.noteLabel.text = note.note_title
+        cell.noteStatus.tag = indexPath.row
         
         if(note.note_status!){
             cell.noteStatus.setImage(UIImage(systemName: "circle.inset.filled"), for: .normal)
             cell.noteStatus.tintColor = UIColor.tintColor
+            cell.noteLabel.textColor = UIColor.placeholderText
         }
         else{
             cell.noteStatus.setImage(UIImage(systemName: "circle"), for: .normal)
-            cell.noteStatus.tintColor = UIColor.white
+            cell.noteStatus.tintColor = UIColor.placeholderText
+            cell.noteLabel.textColor = UIColor.label
 
         }
         
@@ -83,7 +96,16 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         
         if (note.note_status!){
             let deleteAction = UIContextualAction(style: .normal, title: "Temizle"){(contextualAction, view, bool ) in
-                print("Silindi")
+                if self.notesList.count == 1{
+                    print(self.notesList.count)
+                    self.homepagePresenterObject?.doDeleteNote(note_id: note.note_id!)
+                    _ = self.notesList.popLast()
+                    self.updateCounter()
+                    self.notesTableView.reloadData()
+                }
+                else{
+                    self.homepagePresenterObject?.doDeleteNote(note_id: note.note_id!)
+                }
             }
             return UISwipeActionsConfiguration(actions: [deleteAction])
             
@@ -97,7 +119,16 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
                 alert.addAction(cancelAction)
                 
                 let evetAction = UIAlertAction(title: "Evet", style: .destructive){action in
-                    //self.anasayfaPresenterNesnesi?.sil(kisi_id: kisi.kisi_id!)
+                    if self.notesList.count == 1{
+                        print(self.notesList.count)
+                        self.homepagePresenterObject?.doDeleteNote(note_id: note.note_id!)
+                        _ = self.notesList.popLast()
+                        self.updateCounter()
+                        self.notesTableView.reloadData()
+                    }
+                    else{
+                        self.homepagePresenterObject?.doDeleteNote(note_id: note.note_id!)
+                    }
                 }
                 alert.addAction(evetAction)
                 
@@ -118,6 +149,7 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
 extension HomepageVC:PtoV_HomepageProtocol{
     func dataSendtoView(noteList: Array<Notes>) {
         self.notesList = noteList
+        self.updateCounter()
         self.notesTableView.reloadData()
     }
 }
@@ -128,6 +160,35 @@ extension HomepageVC:PtoV_HomepageProtocol{
 extension HomepageVC:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         homepagePresenterObject?.doSearchNote(searchString: searchText)
+    }
+}
+
+
+func copyDB(){
+    let bundlePath = Bundle.main.path(forResource: "notesDB", ofType: ".sqlite")
+    let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    let copyPath = URL(fileURLWithPath: destPath).appendingPathComponent("notesDB.sqlite")
+    let fm = FileManager.default
+    if fm.fileExists(atPath: copyPath.path){
+        print("db exist")
+    }
+    else{
+        do{
+            try fm.copyItem(atPath: bundlePath!, toPath: copyPath.path)
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+    }
+}
+
+
+extension HomepageVC{
+    func updateCounter(){
+        let filteredList = notesList.filter{ i in
+            i.note_status == false
+        }
+        counterLabel.text = String(filteredList.count)
     }
 }
 

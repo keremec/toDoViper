@@ -77,10 +77,11 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzZ-nK-oxo">
                                                     <rect key="frame" x="0.0" y="10" width="45" height="83"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system"/>
                                                     <connections>
-                                                        <action selector="noteButtonAction:" destination="I43-82-SEi" eventType="touchUpInside" id="hT3-ST-MdC"/>
+                                                        <action selector="cellButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0cR-Jz-zSz"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-76-BHq">

@@ -29,8 +29,4 @@ class TableViewNoteCell: UITableViewCell {
     }
 
     
-    @IBAction func noteButtonAction(_ sender: Any) {
-        print("tikladin bana")
-    }
-    
 }
