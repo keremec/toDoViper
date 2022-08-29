@@ -31,16 +31,11 @@ class HomepageVC: UIViewController {
         
         
     }
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-
     
     
 }
+
+
 
 
 extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
@@ -48,11 +43,14 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         return notesList.count
     }
     
+    //MARK: Adding Cells
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let note = notesList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as! TableViewNoteCell
         
         cell.noteLabel.text = note.note_title
+        
         if(note.note_status!){
             cell.noteStatus.setImage(UIImage(systemName: "circle.inset.filled"), for: .normal)
             cell.noteStatus.tintColor = UIColor.tintColor
@@ -63,12 +61,52 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
 
         }
         
-        
         return cell
-        
         
     }
     
     
     
+    //MARK: Tableview Selection
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let note = notesList[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: note)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //MARK: Swipe Actions
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let note = self.notesList[indexPath.row]
+        
+        if (note.note_status!){
+            let deleteAction = UIContextualAction(style: .normal, title: "Temizle"){(contextualAction, view, bool ) in
+                print("Silindi")
+            }
+            return UISwipeActionsConfiguration(actions: [deleteAction])
+            
+        }
+        else{
+            let deleteConfirmAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction, view, bool ) in
+                let alert = UIAlertController(title: "Silme İşlemi", message: "Bu not silinsin mi?", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+                
+                alert.addAction(cancelAction)
+                
+                let evetAction = UIAlertAction(title: "Evet", style: .destructive){action in
+                    //self.anasayfaPresenterNesnesi?.sil(kisi_id: kisi.kisi_id!)
+                }
+                alert.addAction(evetAction)
+                
+                self.present(alert, animated: true)
+                
+            }
+            return UISwipeActionsConfiguration(actions: [deleteConfirmAction])
+        }
+
+    }
+
 }
+

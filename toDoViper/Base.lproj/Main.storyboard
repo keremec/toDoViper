@@ -35,7 +35,7 @@
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Qws-dQ-x3P" kind="presentation" id="Njr-j6-Zh9"/>
+                                    <segue destination="Qws-dQ-x3P" kind="presentation" identifier="" id="Njr-j6-Zh9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-JH-z0W">
@@ -48,19 +48,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3W-al-Soq">
-                                <rect key="frame" x="343" y="115" width="51" height="54"/>
+                                <rect key="frame" x="343" y="115" width="51" height="53"/>
                                 <fontDescription key="fontDescription" name="CraftRounded-Regular" family="Craft Rounded" pointSize="46"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-ZK-e6I">
-                                <rect key="frame" x="20" y="115" width="116" height="54"/>
+                                <rect key="frame" x="20" y="115" width="112" height="53"/>
                                 <fontDescription key="fontDescription" name="CraftRounded-DemiBold" family="Craft Rounded" pointSize="46"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-dV-tt3">
-                                <rect key="frame" x="0.0" y="189" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="cEU-Hb-orr">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
@@ -68,7 +68,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="103" id="I43-82-SEi" customClass="TableViewNoteCell" customModule="toDoViper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="103" id="I43-82-SEi" customClass="TableViewNoteCell" customModule="toDoViper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="95.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I43-82-SEi" id="KJM-bK-LFw">
@@ -131,7 +131,7 @@
                         <outlet property="counterLabel" destination="s3W-al-Soq" id="ccU-NN-6N5"/>
                         <outlet property="notesTableView" destination="r3P-dV-tt3" id="EVr-ae-nNp"/>
                         <outlet property="searchBar" destination="cEU-Hb-orr" id="EoW-0L-WX4"/>
-                        <segue destination="ZYk-Vd-zXf" kind="presentation" id="tBG-cL-a09"/>
+                        <segue destination="ZYk-Vd-zXf" kind="presentation" identifier="toDetail" id="tBG-cL-a09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
