@@ -33,7 +33,10 @@ class HomepagePresenter:VtoP_HomepageProtocol{
 
 extension HomepagePresenter: ItoP_HomepageProtocol{
     func dataSendtoPresenter(noteList: Array<Notes>) {
-        homepageView?.dataSendtoView(noteList: noteList)
+        var list = noteList
+        list.reverse()
+        list = list.sorted(by: { $0.note_status!.intValue < $1.note_status!.intValue })
+        homepageView?.dataSendtoView(noteList: list)
     }
     
     

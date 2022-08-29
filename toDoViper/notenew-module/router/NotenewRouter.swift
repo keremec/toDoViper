@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class NotenewRouter: PtoR_NotenewProtocol{
+    static func createModule(ref: NotenewVC) {
+        ref.notenewPresenterObject = NotenewPresenter()
+        ref.notenewPresenterObject?.notenewInteractor = NotenewInteractor()
+    }
+}

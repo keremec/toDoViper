@@ -35,6 +35,7 @@ class HomepageVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         homepagePresenterObject?.doLoadNote()
         updateCounter()
+        print("calisti")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,6 +46,10 @@ class HomepageVC: UIViewController {
                 goalVC.delegateSave = self
                 goalVC.note = note
             }
+            
+        case "toNew":
+            let goalVC = segue.destination as! NotenewVC
+            goalVC.delegateCreate = self
             
         default:
             print("identifier not found")
@@ -127,7 +132,7 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         }
         else{
             let deleteConfirmAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction, view, bool ) in
-                let alert = UIAlertController(title: "Silme İşlemi", message: "Bu not silinsin mi?", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Bu Not Silinsin Mi?", message: "\(note.note_title!)", preferredStyle: .actionSheet)
                 
                 let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
                 

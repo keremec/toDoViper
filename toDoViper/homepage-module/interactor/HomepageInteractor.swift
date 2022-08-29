@@ -57,7 +57,6 @@ class HomepageInteractor:PtoI_HomepageProtocol{
                                   note_status: (Int(q.string(forColumn: "note_status"))! != 0))
                 
                 list.append(note)
-                list = list.sorted(by: { $0.note_status!.intValue < $1.note_status!.intValue })
                 homepagePresenter?.dataSendtoPresenter(noteList: list)
             }
             
