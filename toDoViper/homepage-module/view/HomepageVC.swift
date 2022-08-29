@@ -37,11 +37,13 @@ class HomepageVC: UIViewController {
         updateCounter()
         
         
+        
     }
     
     @IBAction func cellButton(_ sender: UIButton) {
         let note = self.notesList[sender.tag]
         homepagePresenterObject?.doMarkNote(note_id: note.note_id!, value: !(note.note_status!))
+        homepagePresenterObject?.doSearchNote(searchString: searchBar.text!)
     }
     
 
@@ -105,6 +107,7 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
                 }
                 else{
                     self.homepagePresenterObject?.doDeleteNote(note_id: note.note_id!)
+                    self.homepagePresenterObject?.doSearchNote(searchString: self.searchBar.text!)
                 }
             }
             return UISwipeActionsConfiguration(actions: [deleteAction])
@@ -128,6 +131,7 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
                     }
                     else{
                         self.homepagePresenterObject?.doDeleteNote(note_id: note.note_id!)
+                        self.homepagePresenterObject?.doSearchNote(searchString: self.searchBar.text!)
                     }
                 }
                 alert.addAction(evetAction)

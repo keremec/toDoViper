@@ -85,7 +85,6 @@ class HomepageInteractor:PtoI_HomepageProtocol{
         db?.open()
         do {
             try db!.executeUpdate("UPDATE notes SET note_status= ? WHERE note_id = ?", values: [intValue,note_id])
-            loadNote()
         }
         catch{
             print(error.localizedDescription)
