@@ -62,8 +62,8 @@ class NotedetailVC: UIViewController {
 extension NotedetailVC:UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         if tfNoteDetail.textColor == UIColor.placeholderText{
-        tfNoteDetail.text = nil
-        tfNoteDetail.textColor = UIColor.label
+            tfNoteDetail.text = nil
+            tfNoteDetail.textColor = UIColor.label
         }
     }
     
